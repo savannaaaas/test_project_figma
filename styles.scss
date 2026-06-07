@@ -1,0 +1,184 @@
+$font-main: Arial, sans-serif;
+$font-accent: "Montserrat", sans-serif;
+
+$color-bg: #e0dfdf;
+$color-white: #ffffff;
+$color-dark: #0d274d;
+$color-dark-border: #103264;
+
+$color-text: #282828;
+$color-primary: #00bceb;
+$color-success: #0e9a0b;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  background: $color-bg;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pricing {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid $color-dark;
+  background: $color-white;
+
+  .card {
+    background: $color-white;
+    border-right: 1px solid $color-dark;
+    display: flex;
+    flex-direction: column;
+    max-height: 650px;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .card-header {
+      background: $color-dark;
+      color: $color-white;
+      text-align: center;
+      font-family: $font-accent;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 16px 10px;
+      border-right: 1px solid $color-dark-border;
+    }
+
+    .card-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .advantages {
+      list-style: none;
+      min-height: 90px;
+
+      li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 14px;
+        font-size: 15px;
+        color: $color-text;
+        line-height: 1.4;
+
+        &::before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: $color-success;
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .price-block {
+      text-align: center;
+      margin: 10px 0 20px;
+
+      h3 {
+        font-size: 17px;
+        color: $color-text;
+        margin-bottom: 8px;
+      }
+    }
+
+    .price {
+      color: $color-success;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 18px;
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-text;
+      }
+    }
+
+    .depths {
+      border-top: 1px solid $color-primary;
+      padding-top: 15px;
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 30px;
+      height: 100px;
+      max-height: 100px;
+      align-content: start;
+
+      a {
+        color: $color-text;
+        text-decoration: underline;
+        font-size: 16px;
+        position: relative;
+        padding-left: 18px;
+
+        &::before {
+          content: "▶";
+          position: absolute;
+          left: 0;
+          color: $color-primary;
+          font-size: 15px;
+          bottom: 2px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: $color-primary;
+          text-decoration: none;
+        }
+      }
+    }
+
+    button {
+      margin-top: 28px;
+      height: 46px;
+      border: none;
+      border-radius: 6px;
+      background: $color-primary;
+      color: $color-white;
+      font-size: 18px;
+      font-weight: 700;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .pricing {
+    grid-template-columns: 1fr;
+
+    .card {
+      border-right: none;
+      border-bottom: 1px solid $color-dark;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

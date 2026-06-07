@@ -1,0 +1,156 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #e0dfdf;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pricing {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid #0d274d;
+  background: #ffffff;
+}
+.pricing .card {
+  background: #ffffff;
+  border-right: 1px solid #0d274d;
+  display: flex;
+  flex-direction: column;
+  max-height: 650px;
+}
+.pricing .card:last-child {
+  border-right: none;
+}
+.pricing .card .card-header {
+  background: #0d274d;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px 10px;
+  border-right: 1px solid #103264;
+}
+.pricing .card .card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.pricing .card .advantages {
+  list-style: none;
+  min-height: 90px;
+}
+.pricing .card .advantages li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #282828;
+  line-height: 1.4;
+}
+.pricing .card .advantages li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0e9a0b;
+  font-weight: bold;
+  font-size: 16px;
+}
+.pricing .card .price-block {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+.pricing .card .price-block h3 {
+  font-size: 17px;
+  color: #282828;
+  margin-bottom: 8px;
+}
+.pricing .card .price {
+  color: #0e9a0b;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.pricing .card .price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #282828;
+}
+.pricing .card .depths {
+  border-top: 1px solid #00bceb;
+  padding-top: 15px;
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 30px;
+  height: 100px;
+  max-height: 100px;
+  align-content: start;
+}
+.pricing .card .depths a {
+  color: #282828;
+  text-decoration: underline;
+  font-size: 16px;
+  position: relative;
+  padding-left: 18px;
+}
+.pricing .card .depths a::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #00bceb;
+  font-size: 15px;
+  bottom: 2px;
+}
+.pricing .card .depths a:hover {
+  cursor: pointer;
+  color: #00bceb;
+  text-decoration: none;
+}
+.pricing .card button {
+  margin-top: 28px;
+  height: 46px;
+  border: none;
+  border-radius: 6px;
+  background: #00bceb;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+}
+.pricing .card button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+@media (max-width: 700px) {
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+  .pricing .card {
+    border-right: none;
+    border-bottom: 1px solid #0d274d;
+  }
+  .pricing .card:last-child {
+    border-bottom: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
