@@ -168,6 +168,32 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .pricing .card {
+    gap: 0;
+  }
+
+  .pricing .card .card-header {
+    font-size: 14px;
+  }
+
+  .pricing .card .depths {
+    height: 120px;
+    max-height: 120px;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+  }
+
+  .pricing .card .depths a {
+    font-size: 14px;
+  }
+
+  .pricing .card button {
+    font-size: 14px;
+    height: 44px;
+  }
+}
+
 @media (max-width: 700px) {
   .pricing {
     grid-template-columns: 1fr;
